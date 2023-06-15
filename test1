@@ -1,0 +1,26 @@
+python  压测  web  页面脚本
+import requests
+import time
+
+# 设置请求URL和参数
+url = 'http://example.com'
+params = {'param1': 'value1', 'param2': 'value2'}
+
+# 设置并发用户数和请求次数
+concurrent_users = 10
+num_requests = 100
+
+# 发送HTTP请求并计时
+start_time = time.time()
+for i in range(num_requests):
+    response = requests.get(url, params=params)
+    print(response.status_code)
+end_time = time.time()
+
+# 计算总请求时间和平均响应时间
+total_time = end_time - start_time
+avg_response_time = total_time / num_requests
+
+# 输出测试结果
+print("Total time: {:.2f} s".format(total_time))
+print("Average response time: {:.2f} s".format(avg_response_time))
