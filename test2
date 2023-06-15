@@ -1,0 +1,32 @@
+使用Robo 3T编写MongoDB用例
+{
+    "_id": ObjectId("60c7f87f7d4a9c1a7d1b6a7f"),
+    "name": "John",
+    "age": 25,
+    "email": "john@example.com"
+},
+{
+    "_id": ObjectId("60c7f8847d4a9c1a7d1b6a80"),
+    "name": "Mary",
+    "age": 30,
+    "email": "mary@example.com"
+},
+{
+    "_id": ObjectId("60c7f88a7d4a9c1a7d1b6a81"),
+    "name": "Tom",
+    "age": 35,
+    "email": "tom@example.com"
+}
+db.users.find({ "age": { "$gte": 30 } }).sort({ "age": -1 })
+{
+    "_id": ObjectId("60c7f88a7d4a9c1a7d1b6a81"),
+    "name": "Tom",
+    "age": 35,
+    "email": "tom@example.com"
+},
+{
+    "_id": ObjectId("60c7f8847d4a9c1a7d1b6a80"),
+    "name": "Mary",
+    "age": 30,
+    "email": "mary@example.com"
+}
