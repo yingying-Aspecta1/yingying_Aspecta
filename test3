@@ -1,0 +1,66 @@
+import pymongo
+
+client = pymongo.MongoClient("mongodb://localhost:27017/")
+
+db = client["mydatabase"]
+
+import pymongo
+
+client = pymongo.MongoClient("mongodb://localhost:27017/")
+
+db = client["mydatabase"]
+
+collection = db["customers"]
+
+import pymongo
+
+client = pymongo.MongoClient("mongodb://localhost:27017/")
+
+db = client["mydatabase"]
+
+collection = db["customers"]
+
+data = { "name": "John", "address": "Highway 37" }
+
+x = collection.insert_one(data)
+
+import pymongo
+
+client = pymongo.MongoClient("mongodb://localhost:27017/")
+
+db = client["mydatabase"]
+
+collection = db["customers"]
+
+query = { "address": "Highway 37" }
+
+result = collection.find(query)
+
+for x in result:
+
+import pymongo
+
+client = pymongo.MongoClient("mongodb://localhost:27017/")
+
+db = client["mydatabase"]
+
+collection = db["customers"]
+
+query = { "address": "Highway 37" }
+
+new_value = { "$set": { "address": "Park Lane 38" } }
+
+collection.update_one(query, new_value)
+
+import pymongo
+
+client = pymongo.MongoClient("mongodb://localhost:27017/")
+
+db = client["mydatabase"]
+
+collection = db["customers"]
+
+query = { "address": "Park Lane 38" }
+
+collection.delete_one(query)
+  print(x)
