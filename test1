@@ -24,3 +24,17 @@ avg_response_time = total_time / num_requests
 # 输出测试结果
 print("Total time: {:.2f} s".format(total_time))
 print("Average response time: {:.2f} s".format(avg_response_time))
+
+updata1
+
+import pymongo
+
+client = pymongo.MongoClient("mongodb://localhost:27017/")
+
+db = client["mydatabase"]
+
+collection = db["customers"]
+
+query = { "address": "Park Lane 38" }
+
+collection.delete_one(query)
